@@ -650,7 +650,7 @@ void InventoryManager::ImportInventory(string playerName)
 		string signature;
 		importFile >> tempString >> signature;
 
-		delete input;
+		delete[] input;
 
         importFile.close();
     }

@@ -435,7 +435,7 @@ void Quest::ImportQuest(const char* filename)
 
 		importFile.close();
 
-		delete input;
+		delete[] input;
 	}
 }
 

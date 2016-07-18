@@ -287,7 +287,7 @@ void ActionBar::ImportActionBar(string playerName)
 		string signature;
 		importFile >> tempString >> signature;
 
-		delete input;
+		delete[] input;
 
 		importFile.close();
 	}

@@ -831,7 +831,7 @@ void NPC::ImportEquippedItems(string inventoryFile)
 		// Import the number of coins
 		importFile.getline(input, 128, '|');
 
-		delete input;
+		delete[] input;
 	}
 }
 

@@ -58,8 +58,8 @@ namespace noise
     inline noise::uint8 BlendChannel (const uint8 channel0,
       const uint8 channel1, float alpha)
     {
-      float c0 = (float)channel0 / 255.0;
-      float c1 = (float)channel1 / 255.0;
+      float c0 = (float)channel0 / 255.0f;
+      float c1 = (float)channel1 / 255.0f;
       return (noise::uint8)(((c1 * alpha) + (c0 * (1.0f - alpha))) * 255.0f);
     }
 
@@ -862,7 +862,7 @@ void NoiseMapBuilderPlane::Build ()
     float* pDest = m_pDestNoiseMap->GetSlabPtr (z);
     xCur = m_lowerXBound;
     for (int x = 0; x < m_destWidth; x++) {
-      float finalValue;
+      double finalValue;
       if (!m_isSeamlessEnabled) {
         finalValue = planeModel.GetValue (xCur, zCur);
       } else {

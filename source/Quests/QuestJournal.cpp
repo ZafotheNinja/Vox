@@ -233,6 +233,6 @@ void QuestJournal::ImportQuestJournal(int playerNum)
 
 		importFile.close();
 
-		delete input;
+		delete[] input;
 	}
 }
